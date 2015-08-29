@@ -6,7 +6,7 @@
 #                           #
 # Written By Floris Romeijn #
 
-MCU=atxmega128a4u
+MCU=atxmega256a3u
 
 #Project name, not realy nessasary
 PROJECTNAME=myproject
@@ -152,7 +152,6 @@ stats: $(TRG)
 	$(SIZE) $(TRG) 
 
 hex: $(HEXTRG)
-
 
 writeflash: hex
 	$(AVRDUDE) -c $(AVRDUDE_PROGRAMMERID)   \

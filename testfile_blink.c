@@ -6,8 +6,7 @@
 //                           //
 // Written By Floris Romeijn //
 
-
-#define F_CPU 32000000UL
+#define F_CPU 2000000UL
 
 #include <avr/io.h>
 #include <util/delay.h>
@@ -17,11 +16,11 @@
 
 int main(void)
 {
-  PORTE.DIRSET = PIN0_bm;
+  PORTC.DIRSET = PIN0_bm;
 
   while(1)
   {
-    PORTE.OUTTGL = PIN0_bm;
+    PORTC.OUTTGL = PIN0_bm;
     _delay_ms(500);
   }
 }

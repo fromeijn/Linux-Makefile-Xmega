@@ -249,6 +249,13 @@ clean:
 	$(REMOVE) $(LST) $(GDBINITFILE)
 	$(REMOVE) $(GENASMFILES)
 	$(REMOVE) $(HEXTRG)
+
+#### Cleanup, keep hex ####
+clean_keep_hex:
+	$(REMOVE) $(TRG) $(TRG).map $(DUMPTRG)
+	$(REMOVE) $(OBJDEPS)
+	$(REMOVE) $(LST) $(GDBINITFILE)
+	$(REMOVE) $(GENASMFILES)
 	
 
 

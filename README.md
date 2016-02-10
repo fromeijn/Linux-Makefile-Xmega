@@ -28,7 +28,7 @@ make
 
 there after
 
-make program
+make writeflash
 
 for programming your device
 

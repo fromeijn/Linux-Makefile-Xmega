@@ -18,7 +18,7 @@ copy avrisp.rules to /dev/udev/rules/
 
 add current username to /etc/group
 
-dialout:x:20:[yourusername]
+dialout\:x:20:[yourusername]
 
 # testing
 

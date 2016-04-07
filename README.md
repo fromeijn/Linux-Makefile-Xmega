@@ -6,14 +6,23 @@ this is a makefile and compiler setup for the atxmega series from atmel
 sudo apt-get install avrdude
 ```
 # install toolchain
+(this is for 64bit)
+extract avr8-gnu-toolchain-3.5.1.1671-linux.any.x86_64.tar.gz
+or
+(this is for 32bit)
+avr8-gnu-toolchain-3.5.1.1671-linux.any.x86.tar.gz
 
-extract avr8-gnu-toolchain-3.5.0.1662-linux.any.x86_64.tar.gz
+add files to PATH
+edit /etc/environment
+```
+sudo nano /etc/environment
+```
+add to PATH string (between double quotes):
+```
+:/your/location/avr8-gnu-toolchain-linux_x86_64/bin
+```
+log out and in again 
 
-add following to ~/.profile
-export PATH=$PATH:/path/to/avr8-gnu-toolchain-linux_x86_64/bin
-```
-echo "export PATH=$PATH:/path/to/avr8-gnu-toolchain-linux_x86_64/bin" >> ~/.profile
-```
 # install programming tools
 
 copy avrisp.rules to /dev/udev/rules/

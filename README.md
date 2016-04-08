@@ -18,20 +18,28 @@ edit /etc/environment
 sudo nano /etc/environment
 ```
 add to PATH string (between double quotes):
+(for 64bit)
 ```
 :/your/location/avr8-gnu-toolchain-linux_x86_64/bin
 ```
+(for 32bit)
+```
+:/your/location/avr8-gnu-toolchain-linux_x86/bin
+```
+
 log out and in again 
 
 # install programming tools
 
 copy avrisp.rules to /dev/udev/rules/
 ```
-cp avrisp.rules /dev/udev/rules/
+sudo cp avrisp.rules /etc/udev/rules.d
 ```
 add current username to /etc/group
+(optional, for serial debugging )
 ```
-dialout\:x:20:[yourusername]
+sudo nano /etc/group
+dialout:x:20:[yourusername]
 ```
 # testing
 
@@ -43,5 +51,5 @@ there after
 ```
 make writeflash
 ```
-for programming your device
+for programming your device (should not give usb errors, if programmer is plugged in)
 

@@ -12,7 +12,7 @@ MCU=atxmega256a3u
 PROJECTNAME=myproject
 
 # Source files
-PRJSRC=$(wildcard *.c)
+PRJSRC=$(wildcard *.c) $(wildcard */*.c)
 
 # additional includes (e.g. -I/path/to/mydir)
 INC=
@@ -71,7 +71,8 @@ CFLAGS=-I. $(INC) -g -mmcu=$(MCU) -O$(OPTLEVEL) \
 	-Wall					               	\
 	-std=gnu99								\
 	-Wa,-ahlms=$(firstword                  \
-	$(filter %.lst, $(<:.c=.lst)))
+	$(filter %.lst, $(<:.c=.lst)))			\
+	-o $(firstword $(filter %.o, $(<:.c=.o)))
 
 # c++ specific flags
 CPPFLAGS=-fno-exceptions               \

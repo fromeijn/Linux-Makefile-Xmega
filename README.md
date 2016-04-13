@@ -25,9 +25,7 @@ add to PATH string (between double quotes):
 (for 32bit)
 ```
 :/your/location/avr8-gnu-toolchain-linux_x86/bin
-```
-
-log out and in again 
+``` 
 
 # install programming tools
 
@@ -39,8 +37,12 @@ add current username to /etc/group
 (optional, for serial debugging )
 ```
 sudo nano /etc/group
-dialout:x:20:[yourusername]
+dialout:x:20:yourusername
 ```
+
+#log out and in again
+Or Reboot
+
 # testing
 
 run in this folder
